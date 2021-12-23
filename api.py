@@ -44,3 +44,7 @@ def handle_message(event):
 
 if __name__ == "__main__":
     app.run()
+
+
+
+# heroku git:remote -a cpff-bot(可以開通這條路給HEROKU GIT)
