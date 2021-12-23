@@ -37,9 +37,30 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    msg = event.message.text
+    r = '所以呢?給魚啊?'
+
+    if ['酷酷呢', '酷酷勒', '酷酷哩', '酷酷在幹嘛'] in msg:
+        r = '酷酷在睡覺,沒上班'
+    elif ['狡猾鵝鵝', '狡猾鵝'] in msg:
+        r = '你才狡猾,你全家都狡猾'
+    elif ['鵝鵝好可愛', '鵝鵝可愛', '鵝鵝你怎麼這麼可愛'] in msg:
+        r = '那當然'
+    elif ['額額抱抱', '鵝鵝親親'] in msg:
+        r = '抱抱 500, 親親 1000'
+    elif ['給你魚'] in msg:
+        r = '很好,這還差不多,給個五萬條吧'
+    elif ['不想上班'] in msg:
+        r = '你不要讓我生氣,八嘎'
+    elif ['傻眼'] in msg:
+        r = '還好吧,嘿嘿'
+    elif ['好啦'] in msg:
+        r = '要不要給本鵝魚?'
+    else:
+        r = '所以我說那個魚呢?'
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
