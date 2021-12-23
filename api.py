@@ -40,21 +40,21 @@ def handle_message(event):
     msg = event.message.text
     r = '所以呢?給魚啊?'
 
-    if ['酷酷呢', '酷酷勒', '酷酷哩', '酷酷在幹嘛'] in msg:
+    if msg in ['酷酷呢', '酷酷勒', '酷酷哩', '酷酷在幹嘛']:
         r = '酷酷在睡覺,沒上班'
-    elif ['狡猾鵝鵝', '狡猾鵝'] in msg:
+    elif msg in ['狡猾鵝鵝', '狡猾鵝']:
         r = '你才狡猾,你全家都狡猾'
-    elif ['鵝鵝好可愛', '鵝鵝可愛', '鵝鵝你怎麼這麼可愛'] in msg:
+    elif msg in ['鵝鵝好可愛', '鵝鵝可愛', '鵝鵝你怎麼這麼可愛']:
         r = '那當然'
-    elif ['額額抱抱', '鵝鵝親親'] in msg:
+    elif msg in ['額額抱抱', '鵝鵝親親']:
         r = '抱抱 500, 親親 1000'
-    elif ['給你魚'] in msg:
+    elif msg in ['給你魚']:
         r = '很好,這還差不多,給個五萬條吧'
-    elif ['不想上班'] in msg:
+    elif msg in ['不想上班']:
         r = '你不要讓我生氣,八嘎'
-    elif ['傻眼'] in msg:
+    elif msg in ['傻眼']:
         r = '還好吧,嘿嘿'
-    elif ['好啦'] in msg:
+    elif msg in ['好啦']:
         r = '要不要給本鵝魚?'
     else:
         r = '所以我說那個魚呢?'
